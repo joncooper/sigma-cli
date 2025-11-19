@@ -1,0 +1,45 @@
+[project]
+name = "sigma-cli"
+version = "0.1.0"
+description = "Modern command-line interface for Sigma Computing REST API"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Jon Cooper", email = "jon@sigmacomputing.com"},
+]
+keywords = ["sigma", "cli", "api", "rest", "analytics"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "typer>=0.12.0",
+    "httpx>=0.27.0",
+    "rich>=13.7.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.2.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/joncooper/sigma-cli"
+Documentation = "https://github.com/joncooper/sigma-cli"
+Repository = "https://github.com/joncooper/sigma-cli"
+Issues = "https://github.com/joncooper/sigma-cli/issues"
+
+[project.scripts]
+sigma = "sigma_cli.cli:app"
+sigma-cli = "sigma_cli.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sigma_cli"]
