@@ -40,6 +40,24 @@ uv pip install -e .
 
 After installation, the `sigma` command will be available in your PATH.
 
+### Shell Completion (Optional)
+
+Enable tab completion for zsh:
+
+```bash
+# Add to your ~/.zshrc
+eval "$(_SIGMA_COMPLETE=zsh_source sigma)"
+```
+
+For bash:
+
+```bash
+# Add to your ~/.bashrc
+eval "$(_SIGMA_COMPLETE=bash_source sigma)"
+```
+
+After adding, restart your shell or run `source ~/.zshrc` (or `~/.bashrc`).
+
 ## Quick Start
 
 ### 1. Configure Credentials
